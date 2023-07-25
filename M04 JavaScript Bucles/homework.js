@@ -158,16 +158,17 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-    for (var i=2 ; i<= num; i++){
-      if (num % i==0){
+   if (num <=1){
+      return false;
+   }
+    for (let i=2 ; i<= num/2; i++){
+      if (num % i===0){
          return false;
+      } 
       } 
       return true;
-      if (num<0 && num===0 && num===1) {
-         return false;
-      }
       } 
-    } 
+    
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
@@ -198,13 +199,13 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-    
+    let contador = 0;
+    let resultado = num;
     do {
-      var i = 0;
-      i++; num = num + 5;
-      
-    } while (i<8); 
-      return num;
+      resultado = resultado + 5;
+      contador = contador + 1;
+    } while (contador<8); 
+      return resultado;
 }    
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
